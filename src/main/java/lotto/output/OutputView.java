@@ -1,5 +1,7 @@
 package lotto.output;
 
+import lotto.Lotto;
+
 import java.util.List;
 
 public class OutputView {
@@ -19,11 +21,13 @@ public class OutputView {
         System.out.print("보너스 번호를 입력하세요 : ");
     }
 
-    public void printLottoPurchaseCount(int lottoCnt) {
+    public void printLottoPurchaseCount(Long lottoCnt) {
         System.out.println(lottoCnt + "개를 구매했습니다.");
     }
-    public void printPurchasedLottoNumbers(List<Integer> purchaseLottoNumList) {
-        System.out.println(purchaseLottoNumList);
+    public void printPurchasedLottoNumbers(List<Lotto> lottoList) {
+        for (Lotto lotto : lottoList) {
+            System.out.println(lotto);
+        }
     }
 
 }
