@@ -28,4 +28,13 @@ public enum LottoPrize {
         }
         return String.format("%d개 일치 (%s원) - %d개", matchCount, String.format("%,d", prizeAmount), count);
     }
+
+    public static LottoPrize findPrizeByMatchCount(int matchCount) {
+        for (LottoPrize prize : LottoPrize.values()) {
+            if (prize.getMatchCount() == matchCount) {
+                return prize;
+            }
+        }
+        return null;
+    }
 }

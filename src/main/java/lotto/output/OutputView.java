@@ -1,6 +1,6 @@
 package lotto.output;
 
-import lotto.Lotto;
+import lotto.domain.Lotto;
 import lotto.domain.prize.LottoPrize;
 
 import java.util.List;
@@ -22,6 +22,7 @@ public class OutputView {
     public void printLottoPurchaseCount(Long lottoCnt) {
         System.out.println(lottoCnt + "개를 구매했습니다.");
     }
+
     public void printPurchasedLottoNumbers(List<Lotto> lottoList) {
         for (Lotto lotto : lottoList) {
             System.out.println(lotto.getNumbers());
@@ -39,7 +40,6 @@ public class OutputView {
     }
 
     public void printYield(double yield) {
-        System.out.printf("총 수익률은 %.2f%%입니다.%n", yield);
+        System.out.printf("총 수익률은 %.1f%%입니다.%n", yield);
     }
-
 }
