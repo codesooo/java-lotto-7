@@ -5,20 +5,16 @@ import lotto.Lotto;
 import java.util.List;
 
 public class OutputView {
-    public void printLottoPrompt() {
-        System.out.println("================== 로또 발매기 ==================\n\n");
-    }
-
     public void printPurchasePrompt() {
-        System.out.print("구입할 로또 금액을 입력하세요 : ");
+        System.out.println("구입할 로또 금액을 입력하세요 : ");
     }
 
     public void printWinningPrompt() {
-        System.out.print("당첨 번호를 입력하세요 : ");
+        System.out.println("당첨 번호를 입력하세요 : ");
     }
 
     public void printBonusPrompt() {
-        System.out.print("보너스 번호를 입력하세요 : ");
+        System.out.println("보너스 번호를 입력하세요 : ");
     }
 
     public void printLottoPurchaseCount(Long lottoCnt) {
@@ -26,7 +22,7 @@ public class OutputView {
     }
     public void printPurchasedLottoNumbers(List<Lotto> lottoList) {
         for (Lotto lotto : lottoList) {
-            System.out.println(lotto);
+            System.out.println(lotto.getNumbers());
         }
     }
 
