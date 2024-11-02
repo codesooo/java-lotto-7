@@ -22,4 +22,10 @@ public enum LottoPrize {
     public int getPrizeAmount() {
         return prizeAmount;
     }
+    public String toFormattedString(int count) {
+        if (this == FIVE_MATCHES_WITH_BONUS) {
+            return String.format("%d개 일치, 보너스 볼 일치 (%s원) - %d개", matchCount, String.format("%,d", prizeAmount), count);
+        }
+        return String.format("%d개 일치 (%s원) - %d개", matchCount, String.format("%,d", prizeAmount), count);
+    }
 }
